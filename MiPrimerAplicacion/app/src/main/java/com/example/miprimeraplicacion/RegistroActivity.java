@@ -315,32 +315,32 @@ public class RegistroActivity extends AppCompatActivity {
      * @return true si la contraseña es válida, false en caso contrario.
      */
     public boolean isValidPassword(String password) {
-        if (password == null || password.length() < 8) {
-            Toast.makeText(this, "La contraseña debe tener minimo 8 caracteres", Toast.LENGTH_SHORT).show();
-            return false; // Menos de 8 caracteres
-        }
-
-        boolean hasLetter = false;
-        boolean hasDigit = false;
-        boolean hasSpecial = false;
-
-        // Recorre cada carácter en la contraseña
-        for (char c : password.toCharArray()) {
-            if (Character.isLetter(c)) {
-                hasLetter = true;
-            } else if (Character.isDigit(c)) {
-                hasDigit = true;
-            } else if (!Character.isLetterOrDigit(c)) {
-                hasSpecial = true;
+            if (password == null || password.length() < 8) {
+                //Toast.makeText(this, "La contraseña debe tener minimo 8 caracteres", Toast.LENGTH_SHORT).show();
+                return false; // Menos de 8 caracteres
             }
 
-            // Si tiene al menos dos tipos de caracteres, es válida
-            if ((hasLetter && hasDigit) || (hasLetter && hasSpecial) || (hasDigit && hasSpecial)) {
-                return true;
-            }
-        }
+            boolean hasLetter = false;
+            boolean hasDigit = false;
+            boolean hasSpecial = false;
 
-        Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show();
+            // Recorre cada carácter en la contraseña
+            for (char c : password.toCharArray()) {
+                if (Character.isLetter(c)) {
+                    hasLetter = true;
+                } else if (Character.isDigit(c)) {
+                    hasDigit = true;
+                } else if (!Character.isLetterOrDigit(c)) {
+                    hasSpecial = true;
+                }
+
+                // Si tiene al menos dos tipos de caracteres, es válida
+                if ((hasLetter && hasDigit) || (hasLetter && hasSpecial) || (hasDigit && hasSpecial)) {
+                    return true;
+                }
+            }
+
+        //Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show();
         return false; // No cumple con los tipos mínimos de caracteres
     }
 
