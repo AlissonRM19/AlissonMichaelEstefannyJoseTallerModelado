@@ -16,13 +16,13 @@ public class Test1 {
     @Test
     public void Test2passwordConfirmationMatch() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.passwordConfirmationMatch("qwer1567","abcd1234")); // Contraseñas distintas
+        assertFalse(validator.passwordConfirmationMatch("qwer1567","abcd1234")); // Contraseñas distintas
     }
 
     @Test
     public void Test3passwordConfirmationMatch() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.passwordConfirmationMatch("","abcd1234")); // Una contraseña vacia
+        assertFalse(validator.passwordConfirmationMatch("","abcd1234")); // Una contraseña vacia
     }
 
 
@@ -35,13 +35,13 @@ public class Test1 {
     @Test
     public void Test2isEmpty() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.isEmpty("ar12")); // Una contraseña con caracteres
+        assertFalse(validator.isEmpty("ar12")); // Una contraseña con caracteres
     }
 
     @Test
     public void Test3isEmpty() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.isEmpty("ti*$")); // Una contraseña con caracteres especiales
+        assertFalse(validator.isEmpty("ti*$")); // Una contraseña con caracteres especiales
     }
 
 }
