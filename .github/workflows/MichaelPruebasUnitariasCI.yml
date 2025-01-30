@@ -44,7 +44,7 @@ jobs:
       run: ./gradlew test
       
     - name: Unit Test
-      run: ./gradlew testDebugUnitTest
+      run: ./gradlew test
 
     - name: Android Test Report
       uses: asadmansr/android-test-report-action@v1.2.0
