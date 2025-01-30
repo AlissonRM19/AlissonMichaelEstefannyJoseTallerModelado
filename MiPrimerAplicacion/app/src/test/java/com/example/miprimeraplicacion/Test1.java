@@ -14,11 +14,13 @@ public class Test1 {
         assertTrue(validator.passwordConfirmationMatch("abcd1234","abcd1234")); //Contraseñas iguales
     }
 
+
     @Test
     public void Test2passwordConfirmationMatch() {
         TestMetodos validator = new TestMetodos();
         assertFalse(validator.passwordConfirmationMatch("qwer1567","abcd1234")); // Contraseñas distintas
     }
+
 
     @Test
     public void Test3passwordConfirmationMatch() {
@@ -26,6 +28,7 @@ public class Test1 {
         assertFalse(validator.passwordConfirmationMatch("","abcd1234")); // Una contraseña vacia
     }
     
+
 
 
     @Test
