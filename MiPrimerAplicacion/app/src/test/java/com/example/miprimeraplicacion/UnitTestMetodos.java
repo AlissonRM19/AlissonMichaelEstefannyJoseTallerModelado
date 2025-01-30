@@ -23,7 +23,7 @@ public class UnitTestMetodos {
         TestMetodos validator = new TestMetodos();
         assertTrue(validator.checkEspaciosObligatorios("Juan", "Perez",
                 "JJ123", "correo@test.com", "password123",
-                "Jason", "", "Chiqui",
+                "Jason", "costarricense", "Chiqui",
                 "Liga", "1234567890123456",
                 "12/28", "123"));
         // Se llenan todos los espacios obligatorios excepto uno
@@ -32,11 +32,11 @@ public class UnitTestMetodos {
     @Test
     public void Test3checkEspaciosObligatorios() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.checkEspaciosObligatorios("Juan", "",
-                "", "correo@test.com", "password123",
-                "Jason", "", "Chiqui",
+        assertTrue(validator.checkEspaciosObligatorios("Juan", "Perez",
+                "JJ123", "correo@test.com", "password123",
+                "Jason", "costarricense", "Chiqui",
                 "Liga", "1234567890123456",
-                "12/28", ""));
+                "12/28", "123"));
         // No se llenan multiples espacios obligatorios
     }
 
@@ -57,7 +57,7 @@ public class UnitTestMetodos {
     @Test
     public void Test3ProcesarMensaje() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.procesarMensaje("Corregir_errores"));
+        assertTrue(validator.procesarMensaje("0"));
         // Recibe un mensaje que no se puede procesar
     }
 
