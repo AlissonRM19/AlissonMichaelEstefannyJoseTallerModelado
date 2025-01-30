@@ -25,6 +25,7 @@ public class Test1 {
         TestMetodos validator = new TestMetodos();
         assertFalse(validator.passwordConfirmationMatch("","abcd1234")); // Una contraseña vacia
     }
+    
 
 
     @Test
@@ -33,11 +34,13 @@ public class Test1 {
         assertTrue(validator.isEmpty("")); // Una contraseña vacia
     }
 
+
     @Test
     public void Test2isEmpty() {
         TestMetodos validator = new TestMetodos();
         assertFalse(validator.isEmpty("ar12")); // Una contraseña con caracteres
     }
+
 
     @Test
     public void Test3isEmpty() {
