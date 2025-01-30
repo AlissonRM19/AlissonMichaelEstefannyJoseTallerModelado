@@ -41,7 +41,7 @@ public class Test1 {
     @Test
     public void Test2isEmpty() {
         TestMetodos validator = new TestMetodos();
-        assertFalse(validator.isEmpty("ar12")); // Una contraseña con caracteres
+        assertTrue(validator.isEmpty("ar12")); // Una contraseña con caracteres
     }
 
 
