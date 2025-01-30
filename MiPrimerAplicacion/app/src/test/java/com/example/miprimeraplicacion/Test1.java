@@ -39,7 +39,7 @@ public class Test1 {
 
 
     @Test
-    public void Test2isEmpty() {
+    pUblic void Test2isEmpty() {
         TestMetodos validator = new TestMetodos();
         assertTrue(validator.isEmpty("")); // Una contraseña con caracteres
     }
