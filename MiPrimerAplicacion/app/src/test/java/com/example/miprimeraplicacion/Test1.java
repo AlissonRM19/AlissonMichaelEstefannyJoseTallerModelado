@@ -50,5 +50,6 @@ public class Test1 {
         TestMetodos validator = new TestMetodos();
         assertFalse(validator.isEmpty("ti*$")); // Una contraseña con caracteres especiales
     }
+    
 
 }
