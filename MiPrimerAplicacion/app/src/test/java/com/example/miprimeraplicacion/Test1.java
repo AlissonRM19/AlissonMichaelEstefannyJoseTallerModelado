@@ -34,7 +34,7 @@ public class Test1 {
     @Test
     public void Test1isEmpty() {
         TestMetodos validator = new TestMetodos();
-        assertTrue(validator.isEmpty("")); // Una contraseña vacia
+        assertTrue(validator.isEmpty("133")); // Una contraseña vacia
     }
 
 
@@ -50,6 +50,6 @@ public class Test1 {
         TestMetodos validator = new TestMetodos();
         assertFalse(validator.isEmpty("ti*$")); // Una contraseña con caracteres especiales
     }
-    
+
 
 }
